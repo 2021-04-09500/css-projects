@@ -28,7 +28,7 @@
         --small: calc(var(--base-size) / var(--scale)); /* 0.96rem */
     
         /* other variables */
-        --radius: 5px;
+        --radius: 10px;
       }
     
       /* add border box sizing to the page right from the start */
@@ -42,7 +42,6 @@
       }
 body{
     background-color: white;
-    max-width: 350px;
     align-content: center;
     /* border: 1rem solid black; */
      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -50,15 +49,18 @@ body{
     
      
 }
+.container{
+    max-width: 350px;
+}
 img{
     max-width: 100%;
 
 }
-.body{
+/* .body{
     margin: 0;
     padding: 10px 30px;
     font-weight:400; 
-}
+} */
 .recipe{
 font-family:Georgia, 'Times New Roman', Times, serif;
 }
@@ -95,11 +97,24 @@ td{
 }
 
 }
-@media(min-width: 700px){
-    .recipe{
+@media(min-width: 768px){
+    /* .recipe{
         max-width: 100%;
+    } */
+    .container{
+        max-width: 700px;
     }
-    .body{
-        max-width: 100%;
     }
+@media (min-width:1024px){
+    body{
+        padding: 1000;
+        background-color:var(--vanilla) ;
     }
+    .container{
+        max-width: 500px;
+        background-color: white;
+        padding: 30px;
+        margin: 0 auto;
+        border-radius:var(--radius);
+    }
+}
